@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+<package name="leopard.userRole" extends="struts-interceptor" namespace="/userRoel">
+	<action name="toUserRole" class="org.leopard.action.user_role.UserRoleAction" method="toUserRole">
+		<result>/WEB-INF/view/user/userRole.jsp</result>
+	</action>
+	<action name="addUserRole" class="org.leopard.action.user_role.UserRoleAction" method="addUserRole">
+	</action>
+	<action name="delUserRole" class="org.leopard.action.user_role.UserRoleAction" method="delUserRole">
+	</action>
+</package>
+</struts>

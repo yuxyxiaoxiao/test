@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+<package name="leopard.rolemenu" extends="struts-interceptor" namespace="/roleMenu">
+	<action name="toaddRoleMenu" class="org.leopard.action.role_menu.RoleMenuAction" method="toaddRoleMenu">
+	</action>
+	
+	<action name="updateRoleMenu" class="org.leopard.action.role_menu.RoleMenuAction" method="updateRoleMenu">
+	</action>
+</package>
+</struts>

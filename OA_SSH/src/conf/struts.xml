@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+	<!-- 处理后缀名为.do的请求 -->
+	<constant name="struts.action.extension" value="do" />
+	
+	<!-- 配置国际化的资源文件名 -->
+	<!--  <constant name="struts.custom.i18n.resources" value="resources.message"/>-->
+	
+	<!-- 对请求提交的参数进行编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	
+	<!--拦截器的配置 -->
+	 <package name="struts-interceptor" extends="struts-default" namespace="/">
+		<interceptors>
+			<interceptor name="loginInterceptor" class="org.leopard.interceptor.AdminIntercetor"></interceptor>
+				<interceptor-stack name="common-securityInterceptor">
+					<interceptor-ref name="loginInterceptor">
+						<param name="excludeMethods">login</param>
+					</interceptor-ref>
+					<interceptor-ref name="defaultStack" />
+				</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="common-securityInterceptor"/>
+		<global-results> 
+		      <result name="error" type="redirect">login.jsp</result>
+		</global-results>
+	</package>
+	<!-- 引入模块管理的概念，将相关的业务文件封装到单独的xml文件中  -->
+	<include file="conf/struts/struts-user.xml" />
+	<include file="conf/struts/struts-role.xml" />
+	<include file="conf/struts/struts-image.xml" />
+	<include file="conf/struts/struts-menu.xml" />
+	<include file="conf/struts/struts-rolemenu.xml" />
+	<include file="conf/struts/struts-userrole.xml" />
+	<include file="conf/struts/struts-rank.xml" />
+
+</struts>

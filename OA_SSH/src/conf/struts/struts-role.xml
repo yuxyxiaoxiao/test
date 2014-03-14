@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+<package name="leopard.role" extends="struts-interceptor" namespace="/role">
+	<action name="roleList" class="org.leopard.action.role.RoleAction" method="roleList">
+			<result >/WEB-INF/view/role/rolelist.jsp</result>
+			<result name="ajaxpage">/WEB-INF/view/role/rolepagelist.jsp</result>
+	</action>
+	
+	<action name="toaddRole" class="org.leopard.action.role.RoleAction" method="toaddRole">
+			<result >/WEB-INF/view/role/addRole.jsp</result>
+	</action>
+	<action name="addRole" class="org.leopard.action.role.RoleAction" method="addRole">
+			<result type="redirect">/role/roleList.do</result>
+	</action>
+	<action name="delRole" class="org.leopard.action.role.RoleAction" method="delRole">
+	</action>
+	<action name="selectRoleName" class="org.leopard.action.role.RoleAction" method="selectRoleName">
+	</action>
+	<action name="toUpdateRole" class="org.leopard.action.role.RoleAction" method="toUpdateRole">
+		<result>/WEB-INF/view/role/updateRole.jsp</result>
+	</action>
+	<action name="updateRole" class="org.leopard.action.role.RoleAction" method="updateRole">
+		<result type="redirect">/role/roleList.do</result>
+	</action>
+</package>
+</struts>

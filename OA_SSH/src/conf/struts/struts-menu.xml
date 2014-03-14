@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+<package name="leopard.menu" extends="struts-interceptor" namespace="/menu2">
+	<action name="menu" class="org.leopard.action.menu.MenuAction" method="menu">
+		<result>/WEB-INF/view/welcome/menu.jsp</result>
+	</action>
+	<action name="menuList" class="org.leopard.action.menu.MenuAction" method="menuList">
+		<result>/WEB-INF/view/menu/menuList.jsp</result>
+	</action>
+	<action name="addMenu" class="org.leopard.action.menu.MenuAction" method="addMenu">
+	</action>
+	<action name="updateByid" class="org.leopard.action.menu.MenuAction" method="updateByid">
+	</action>
+	<action name="deleteById" class="org.leopard.action.menu.MenuAction" method="deleteById">
+	</action>
+</package>
+</struts>

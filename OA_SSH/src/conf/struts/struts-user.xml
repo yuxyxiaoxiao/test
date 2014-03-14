@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+<package name="leopard.user" extends="struts-interceptor" namespace="/user">
+	<action name="login" class="org.leopard.action.user.UserAction" method="login">
+	</action>
+	<action name="welcome" class="org.leopard.action.user.UserAction" method="welcome">
+		<result>/WEB-INF/view/welcome/welcome.jsp</result>
+	</action>
+	<action name="userList" class="org.leopard.action.user.UserAction" method="userList">
+			<result>/WEB-INF/view/user/userlist.jsp</result>
+			<result name="ajaxpage">/WEB-INF/view/user/userpagelist.jsp</result>
+	</action>
+	<action name="attachFileList" class="org.leopard.action.user.UserAction" method="attachFileList">
+		<result>/WEB-INF/view/user/attachFileList.jsp</result>
+	</action>
+	<action name="delUser" class="org.leopard.action.user.UserAction" method="delUser">
+	</action>
+	<action name="toaddUser" class="org.leopard.action.user.UserAction" method="toaddUser">
+			<result>/WEB-INF/view/user/addUser.jsp</result>
+	</action>
+	<action name="selectUserName" class="org.leopard.action.user.UserAction" method="selectUserName">
+	</action>
+	<action name="addUser" class="org.leopard.action.user.UserAction" method="addUser">
+			<result type="redirect">/user/userList.do</result>
+	</action>
+	<action name="toUpdatePwd" class="org.leopard.action.user.UserAction" method="toUpdatePwd">
+		<result>/WEB-INF/view/user/updatePwd.jsp</result>
+	</action>
+	<action name="updatePwd" class="org.leopard.action.user.UserAction" method="updatePwd">
+	</action>
+	
+	<action name="downFile" class="org.leopard.action.user.UserAction" method="downFile">
+	</action>
+	<action name="toUpdateUser" class="org.leopard.action.user.UserAction" method="toUpdateUser">
+		<result>/WEB-INF/view/user/updateUser.jsp</result>
+	</action>
+	<action name="updateUser" class="org.leopard.action.user.UserAction" method="updateUser">
+		<result type="redirect">/user/userList.do</result>
+	</action>
+	<action name="secede" class="org.leopard.action.user.UserAction" method="secede">
+		<result type="redirect">/user/login.jsp</result>
+	</action>
+</package>
+</struts>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="userDao" class="org.leopard.dao.user.UserDaoImp">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="roleDao" class="org.leopard.dao.role.RoleDaoImp">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="menuDao" class="org.leopard.dao.menu.MenuDaoImp">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="roleMenuDao" class="org.leopard.dao.role_menu.RoleMenuDaoImp">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userRoleDao" class="org.leopard.dao.user_role.UserRoleDaoImp">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="rankDao" class="org.leopard.dao.rank.RankDaoImp">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+</beans>

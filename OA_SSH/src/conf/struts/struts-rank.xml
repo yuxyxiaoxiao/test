@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="GBK" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+<package name="leopard.rank" extends="struts-interceptor" namespace="/rank">
+	<action name="rankList" class="org.leopard.action.rank.RankAction" method="rankList">
+		<result>/WEB-INF/view/rank/rankList.jsp</result>
+		<result name="ajaxpage">/WEB-INF/view/rank/rankPageList.jsp</result>
+	</action>
+	<action name="toaddRank" class="org.leopard.action.rank.RankAction" method="toaddRank">
+		<result>/WEB-INF/view/rank/addRank.jsp</result>
+	</action>
+	<action name="addRank" class="org.leopard.action.rank.RankAction" method="addRank">
+		<result type="redirect">/rank/rankList.do</result>
+	</action>
+	<action name="delRank" class="org.leopard.action.rank.RankAction" method="delRank">
+	</action>
+	<action name="toUpdateRank" class="org.leopard.action.rank.RankAction" method="toUpdateRank">
+		<result>/WEB-INF/view/rank/updateRank.jsp</result>
+	</action>
+	<action name="updateRank" class="org.leopard.action.rank.RankAction" method="updateRank">
+		<result type="redirect">/rank/rankList.do</result>
+	</action>
+</package>
+</struts>

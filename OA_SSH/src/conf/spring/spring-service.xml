@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+        "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+<bean id="userService" class="org.leopard.service.user.UserServiceImp">
+		<property name="userDao" ref="userDao"></property>
+</bean>
+<bean id="roleService" class="org.leopard.service.role.RoleServiceImp">
+		<property name="roleDao" ref="roleDao"></property>
+</bean>
+<bean id="menuService" class="org.leopard.service.menu.MenuServiceImp">
+		<property name="menuDao" ref="menuDao"></property>
+</bean>
+
+<bean id="userRoleService" class="org.leopard.service.user_role.UserRoleServiceImp">
+		<property name="userRoleDao" ref="userRoleDao"></property>
+</bean>
+<bean id="roleMenuService" class="org.leopard.service.role_menu.RoleMenuServiceImp">
+		<property name="roleMenuDao" ref="roleMenuDao"></property>
+</bean>
+<bean id="rankService" class="org.leopard.service.rank.RankServiceImp">
+		<property name="rankDao" ref="rankDao"></property>
+</bean>
+</beans>
